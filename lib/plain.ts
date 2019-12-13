@@ -1,11 +1,12 @@
-import { createClassDecorator, createPropertyDecorator, Type } from "@nger/decorator";
+import { createClassDecorator, createPropertyDecorator, Type, IClassDecorator } from "@nger/decorator";
 export interface Plain {
     desc: string | number | object | (string | number)[];
 }
 export const PlainMetadataKey = `__PlainMetadataKey__`;
-export const Plain = createClassDecorator<Plain>(PlainMetadataKey, (type: Type<any>) => {
-    return {
-        desc: type.name
+export const Plain = createClassDecorator<Plain>(PlainMetadataKey, (item: IClassDecorator<any, Plain>) => {
+    item.options = {
+        desc: item.type.name,
+        ...item.options
     }
 });
 

@@ -26,7 +26,7 @@ export function getPlainPros(type: any): IPropertyDecorator<any, PlainPro>[] {
 export function getPlainDesc(type: any): string | number | object | (string | number)[] | undefined {
     const nger = getINgerDecorator(type);
     const plain = nger.classes.find(it => it.metadataKey === PlainMetadataKey) as IClassDecorator<any, Plain>;
-    if (plain) {
+    if (plain && plain.options) {
         return plain.options.desc;
     }
 }
