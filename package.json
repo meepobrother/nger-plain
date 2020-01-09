@@ -1,6 +1,6 @@
 {
     "name": "@nger/plain",
-    "version": "1.1.5",
+    "version": "1.1.6",
     "description": "> TODO: description",
     "author": "imeepos <1037483576@qq.com>",
     "homepage": "https://github.com/meepobrother/nger3#readme",
@@ -31,6 +31,9 @@
         "@nger/decorator": "^1.1.13"
     },
     "devDependencies": {
-        "@types/node": "^12.12.17"
+        "@types/node": "^13.1.2",
+        "ts-node": "^8.5.4",
+        "tsconfig-paths": "^3.9.0",
+        "typescript": "^3.7.4"
     }
 }

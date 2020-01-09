@@ -1,4 +1,4 @@
-import { Plain, PlainPro, createPlain, toPlain, createPlainModule, PlainModule } from '../lib';
+import { Plain, PlainPro, createPlainModule, PlainModule } from '../lib';
 
 @Plain()
 export class Demo {
